@@ -29,11 +29,11 @@ public class Rocket : MonoBehaviour {
         // Can only turn 1 direction at a time.
         if (Input.GetKey(KeyCode.A))
         {
-            print("Left was pushed");
+            transform.Rotate(Vector3.forward);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            print("Right was pushed");
+            transform.Rotate(-Vector3.forward);
         }
     }
 }

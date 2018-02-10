@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour {
 
+    [SerializeField] float ThrustSpeed = 900f;
+    [SerializeField] float SpinSpeed = 175f;
     Rigidbody rigidBody;
     AudioSource audioSource;
 
@@ -24,9 +26,15 @@ public class Rocket : MonoBehaviour {
     // Can thrust while Pivoting.
     private void Thrusting()
     {
+        // Acceleration based on time
+        float FrameSpeedAccel = ThrustSpeed * Time.deltaTime;
+
         if (Input.GetKey(KeyCode.Space))
         {
-            rigidBody.AddRelativeForce(Vector3.up);
+
+            rigidBody.AddRelativeForce(Vector3.up * FrameSpeedAccel);
+
+            // Stops it from spamming sound
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
@@ -42,14 +50,16 @@ public class Rocket : MonoBehaviour {
     {
         rigidBody.freezeRotation = true; //Take manual control of turning (physics)
 
+        float FrameSpeedRotation = SpinSpeed * Time.deltaTime;
+
         // Can only turn 1 direction at a time.
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(Vector3.forward);
+            transform.Rotate(Vector3.forward * FrameSpeedRotation);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(-Vector3.forward);
+            transform.Rotate(-Vector3.forward * FrameSpeedRotation);
         }
 
         rigidBody.freezeRotation = false;  // resume physics control

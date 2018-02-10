@@ -15,9 +15,25 @@ public class Rocket : MonoBehaviour {
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();  
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Friendly":
+                // do nothing
+                print("OK");
+                break;
+            case "Fuel":
+
+                break;
+            default:
+                print("DEAD");
+                break;
+        }
+    }
+    // Update is called once per frame
+    void Update ()
     {
         Thrusting();
         Rotate();

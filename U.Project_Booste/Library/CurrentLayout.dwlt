@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 1671
+  controlID: 2166
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -131,10 +131,10 @@ MonoBehaviour:
     y: 0
     width: 1255
     height: 947
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 1648
+  controlID: 2167
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,8 +180,8 @@ MonoBehaviour:
     y: 496
     width: 1255
     height: 451
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 1672
+  controlID: 2023
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,8 +229,8 @@ MonoBehaviour:
     y: 0
     width: 381
     height: 553
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -315,7 +315,7 @@ MonoBehaviour:
     width: 1253
     height: 430
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_MaximizeOnPlay: 1
+  m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -398,9 +398,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.7956091, y: -37.606697, z: 249.03595}
+    m_Target: {x: -58.754555, y: 5.2889404, z: 275.42468}
     speed: 2
-    m_Value: {x: -1.7956091, y: -37.606697, z: 249.03595}
+    m_Value: {x: -58.754555, y: 5.2889404, z: 275.42468}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -424,13 +424,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.094587006, y: 0.045690607, z: -0.004346003, w: -0.994458}
+    m_Target: {x: -0.00032739886, y: 0.09377592, z: -0.000030994495, w: -0.9955933}
     speed: 2
-    m_Value: {x: -0.09458701, y: 0.045690607, z: -0.0043460033, w: -0.9944581}
+    m_Value: {x: -0.00032739886, y: 0.09377592, z: -0.000030994495, w: -0.99559325}
   m_Size:
-    m_Target: 298.3007
+    m_Target: 323.12125
     speed: 2
-    m_Value: 298.3007
+    m_Value: 323.12125
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d2270000
+    m_SelectedIDs: 36490000
     m_LastClickedID: 0
-    m_ExpandedIDs: 5ea5ffff50efffff9efbffff00000000
+    m_ExpandedIDs: 9efbffff000000003e280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,18 +589,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Levels
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 56
   m_LastFolders:
-  - Assets/Levels
+  - Assets
   m_LastFoldersGridSize: 56
   m_LastProjectPath: C:\Users\omish\Documents\GitHub\U.Project_Booste\Project_Booste\U.Project_Booste
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: dc270000
-    m_LastClickedID: 10204
+    m_SelectedIDs: 60270000
+    m_LastClickedID: 10080
     m_ExpandedIDs: 000000006027000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0

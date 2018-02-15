@@ -8,6 +8,9 @@ public class Rocket : MonoBehaviour {
     Rigidbody rigidBody;
     AudioSource audioSource;
 
+    enum State { Dead, Alive, Finish };
+    State state = State.Alive;
+
 	// Use this for initialization
 	void Start () {
         // Makes it reference the Rigidbody attached to the rocket ship.
@@ -22,20 +25,35 @@ public class Rocket : MonoBehaviour {
             case "Friendly":
                 break;
             case "Finish":
-                print("Hit Finish");
-                SceneManager.LoadScene(1);
+                state = State.Finish;
+                Invoke("LoadNextLevel", 1.5f);
                 break;
             default:
-                print("DEAD");
-                SceneManager.LoadScene(0);
+                state = State.Dead;
+                audioSource.Stop();
+                Invoke("RestartLevel", 1.5f);
                 break;
         }
     }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    private void LoadNextLevel()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     // Update is called once per frame
     void Update ()
     {
-        Thrusting();
-        Rotate();
+        if(state == State.Alive)
+        {
+            Thrusting();
+            Rotate();
+        }
     }
 
     // Can thrust while Pivoting.

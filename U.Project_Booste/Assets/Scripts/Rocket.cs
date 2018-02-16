@@ -6,7 +6,15 @@ public class Rocket : MonoBehaviour {
     [SerializeField] float ThrustSpeed = 900f;
     [SerializeField] float SpinSpeed = 175f;
     Rigidbody rigidBody;
+
     AudioSource audioSource;
+    [SerializeField] AudioClip mainEngine;
+    [SerializeField] AudioClip Death;
+    [SerializeField] AudioClip Win;
+
+    [SerializeField] ParticleSystem engineParticles;
+    [SerializeField] ParticleSystem deathParticles;
+    [SerializeField] ParticleSystem winParticles;
 
     enum State { Dead, Alive, Finish };
     State state = State.Alive;
@@ -26,12 +34,19 @@ public class Rocket : MonoBehaviour {
                 break;
             case "Finish":
                 state = State.Finish;
+                audioSource.PlayOneShot(Win);
                 Invoke("LoadNextLevel", 1.5f);
+                winParticles.Play();
                 break;
             default:
-                state = State.Dead;
-                audioSource.Stop();
-                Invoke("RestartLevel", 1.5f);
+                if(state == State.Alive)
+                {
+                    state = State.Dead;
+                    audioSource.Stop();
+                    audioSource.PlayOneShot(Death);
+                    Invoke("RestartLevel", 1.5f);
+                    deathParticles.Play();
+                }
                 break;
         }
     }
@@ -70,12 +85,14 @@ public class Rocket : MonoBehaviour {
             // Stops it from spamming sound
             if (!audioSource.isPlaying)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(mainEngine);
             }
+            engineParticles.Play();
         }
         else
         {
             audioSource.Stop();
+            engineParticles.Stop();
         }
     }
 

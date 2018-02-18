@@ -387,7 +387,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4351215082202908, guid: e47c158d1ad24024d8f423dd6a3e665f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 9.86
+      value: 5.8
       objectReference: {fileID: 0}
     - target: {fileID: 4351215082202908, guid: e47c158d1ad24024d8f423dd6a3e665f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -568,7 +568,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4351215082202908, guid: e47c158d1ad24024d8f423dd6a3e665f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 20.000137
+      value: 23.4
       objectReference: {fileID: 0}
     - target: {fileID: 4351215082202908, guid: e47c158d1ad24024d8f423dd6a3e665f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -886,6 +886,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e47c158d1ad24024d8f423dd6a3e665f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1305968778 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1992813759858590, guid: e47c158d1ad24024d8f423dd6a3e665f,
+    type: 2}
+  m_PrefabInternal: {fileID: 376995985}
+--- !u!114 &1305968779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1305968778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b6ee3ff0eff5d488d375f72f1e85a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 13, y: 0, z: 0}
+  movementFactor: 0
 --- !u!4 &1435575353 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4351215082202908, guid: e47c158d1ad24024d8f423dd6a3e665f,

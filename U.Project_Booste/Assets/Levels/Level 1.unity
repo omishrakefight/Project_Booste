@@ -803,7 +803,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4868661805301650, guid: 40957cff4a8c7cd4e94849f0bbbdb02f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4868661805301650, guid: 40957cff4a8c7cd4e94849f0bbbdb02f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -828,6 +828,16 @@ Prefab:
     - target: {fileID: 4868661805301650, guid: 40957cff4a8c7cd4e94849f0bbbdb02f, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 54320798456716456, guid: 40957cff4a8c7cd4e94849f0bbbdb02f,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1.087
+      objectReference: {fileID: 0}
+    - target: {fileID: 114369342800787994, guid: 40957cff4a8c7cd4e94849f0bbbdb02f,
+        type: 2}
+      propertyPath: ThrustSpeed
+      value: 1100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40957cff4a8c7cd4e94849f0bbbdb02f, type: 2}
@@ -903,6 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVector: {x: 13, y: 0, z: 0}
+  period: 2
   movementFactor: 0
 --- !u!4 &1435575353 stripped
 Transform:

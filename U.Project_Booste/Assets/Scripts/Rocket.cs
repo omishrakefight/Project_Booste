@@ -19,6 +19,9 @@ public class Rocket : MonoBehaviour {
     enum State { Dead, Alive, Finish };
     State state = State.Alive;
 
+    enum Cheat { Normal, Cheat };
+    Cheat cheat = Cheat.Normal;
+
 	// Use this for initialization
 	void Start () {
         // Makes it reference the Rigidbody attached to the rocket ship.
@@ -39,6 +42,10 @@ public class Rocket : MonoBehaviour {
                 winParticles.Play();
                 break;
             default:
+                if(cheat == Cheat.Cheat)
+                {
+                    return;
+                }
                 if(state == State.Alive)
                 {
                     state = State.Dead;
@@ -68,6 +75,21 @@ public class Rocket : MonoBehaviour {
         {
             Thrusting();
             Rotate();
+            CommandKeys();
+        }
+    }
+
+    private void CommandKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            SceneManager.LoadScene(1);
+        }
+
+        // Disables collisions
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            cheat = Cheat.Cheat;
         }
     }
 
